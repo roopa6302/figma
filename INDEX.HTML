@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial‐scale=1.0">
+  <title>figma  </title>
+  <link rel="stylesheet" href="style.css" >
+  <link rel="icon"  href="Assets/figma-logo.png">
+</head>
+<body>
+  
+  <div class="wrapper">
+    <aside class="sidebar">
+      <div class="logo">EazyPayouts</div>
+      <nav class="menu">
+        <ul>
+          <li class="menu-item active">Loads</li>
+          <li class="menu-item">Transactions</li>
+        </ul>
+      </nav>
+      <div class="logout">Logout</div>
+    </aside>
+
+    <main class="main-area">
+      <header class="header">
+        <div class="filters">
+          <select id="companySelect">
+            <option value="">Company Name</option>
+          </select>
+          <select id="accountSelect" disabled>
+            <option value="">Account Name</option>
+          </select>
+        </div>
+      </header>
+
+      <section class="balance-section">
+        <div class="balance-card">
+          <div class="balance-icon">💼</div>
+          <div class="balance-info">
+            <div class="balance-label">Available Balance</div>
+            <div id="balanceValue" class="balance-value">₹ 0,00,00,00,000</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="table-section">
+        <div class="table-header">Latest Loads are displayed here</div>
+        <table id="txnTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Credit</th>
+              <th>A/c Balance</th>
+              <th>UTR/RRN</th>
+              <th>A/c No / UPI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="5" class="no-data">Please select company & account</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
